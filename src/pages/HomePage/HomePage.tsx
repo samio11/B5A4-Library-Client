@@ -1,4 +1,5 @@
 import HomeBanner from "./HomeBanner";
+import HomeFooter from "./HomeFooter";
 import HomeTable from "./HomeTable";
 
 const HomePage = () => {
@@ -17,6 +18,9 @@ const HomePage = () => {
         </div>
         <div className="mt-5">
           <HomeTable></HomeTable>
+        </div>
+        <div>
+          <HomeFooter></HomeFooter>
         </div>
       </div>
     </div>

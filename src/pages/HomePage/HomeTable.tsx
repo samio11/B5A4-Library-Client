@@ -23,7 +23,7 @@ const HomeTable = () => {
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="text-xs md:text-sm">
             {bookData?.map((x: IBook) => (
               <tr key={x?.isbn}>
                 <td>{x?.title}</td>
