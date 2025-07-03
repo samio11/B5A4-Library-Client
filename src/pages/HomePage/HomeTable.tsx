@@ -5,7 +5,9 @@ import {
 } from "@/redux/APIs/bookApi";
 import type { IBook } from "@/redux/APIs/interfaces/book.interface";
 import { MdDeleteOutline } from "react-icons/md";
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { MdMovieEdit } from "react-icons/md";
 
 const HomeTable = () => {
   const { data } = useGetAllBookQuery(undefined);
@@ -75,14 +77,19 @@ const HomeTable = () => {
                   {x?.available === true ? "true" : "false"}
                 </td>
                 <td className="flex justify-center items-center gap-2">
-                  <button className="btn btn-outline">Edit</button>
+                  {/* <button className="btn btn-outline">Edit</button> */}
+                  <Link className="btn btn-outline" to={`/edit-book/${x._id}`}>
+                    <MdMovieEdit />
+                  </Link>
                   <button
                     onClick={() => handleDelete(x._id as string)}
                     className="btn btn-outline btn-error"
                   >
                     <MdDeleteOutline />
                   </button>
-                  <button className="btn btn-outline">Borrow</button>
+                  <Link className="btn btn-outline" to={`/borrow/${x._id}`}>
+                    Borrow
+                  </Link>
                 </td>
               </tr>
             ))}
