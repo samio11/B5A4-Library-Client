@@ -7,6 +7,7 @@ import { GrFormView } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import Swal from "sweetalert2";
+import { FaEdit } from "react-icons/fa";
 
 const AllBorrow = () => {
   interface IBorrowBook {
@@ -66,6 +67,7 @@ const AllBorrow = () => {
               <th>Due Date</th>
               <th>View Book</th>
               <th>Delete Borrow</th>
+              <th>Edit Borrow Quantity</th>
             </tr>
           </thead>
           <tbody>
@@ -93,6 +95,15 @@ const AllBorrow = () => {
                     {" "}
                     <MdDelete />{" "}
                   </button>
+                </td>
+                <td>
+                  <Link
+                    className="btn btn-outline"
+                    to={`/edit-borrow/${x?._id}`}
+                  >
+                    {" "}
+                    <FaEdit></FaEdit>{" "}
+                  </Link>
                 </td>
               </tr>
             ))}

@@ -7,6 +7,7 @@ import HomeEditBook from "@/pages/HomePage/HomeEditBook";
 import CreateBorrowBook from "@/pages/BorrowBook/CreateBorrowBook";
 import AllBorrow from "@/pages/AllBorrows/AllBorrow";
 import BookInfo from "@/pages/AllBorrows/BookInfo";
+import EditBorrow from "@/pages/AllBorrows/EditBorrow";
 
 const route = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const route = createBrowserRouter([
       {
         path: "edit-book/:id",
         element: <HomeEditBook></HomeEditBook>,
+      },
+      {
+        path: "edit-borrow/:id",
+        element: <EditBorrow></EditBorrow>,
       },
       {
         path: "borrow/:bookId",

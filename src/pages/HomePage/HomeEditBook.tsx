@@ -44,11 +44,12 @@ const HomeEditBook = () => {
         available: bookData.available,
       });
     }
-  }, [bookData, form]);
+  }, [bookData]);
   const onSubmit: SubmitHandler<IBook> = async (data) => {
     const newData = { ...data, copies: Number(data?.copies) };
+    // console.log("New Data", newData);
     try {
-      const result = await updateBook({ id, newData }).unwrap();
+      const result = await updateBook({ id: id, bookData: newData }).unwrap();
       console.log(result);
       if (result) {
         Swal.fire({
