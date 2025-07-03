@@ -77,7 +77,7 @@ const HomeTable = () => {
                 <td className="flex justify-center items-center gap-2">
                   <button className="btn btn-outline">Edit</button>
                   <button
-                    onClick={() => handleDelete(x._id)}
+                    onClick={() => handleDelete(x._id as string)}
                     className="btn btn-outline btn-error"
                   >
                     <MdDeleteOutline />
