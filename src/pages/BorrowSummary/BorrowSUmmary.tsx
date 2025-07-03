@@ -12,7 +12,7 @@ const BorrowSUmmary = () => {
   }
   const { data } = useShowBorrowSummaryQuery(undefined);
   const totalBorrowBookData: IBorrowBook[] = data?.data;
-  console.log(totalBorrowBookData);
+  // console.log(totalBorrowBookData);
   return (
     <div>
       <div>

@@ -10,6 +10,9 @@ const Navbar = () => {
         <Link to={"/create-book"}>Add Book</Link>
       </li>
       <li>
+        <Link to={"/all-borrow"}>All Borrow</Link>
+      </li>
+      <li>
         <Link to={"/show-borrow-summary"}>Borrow Summary</Link>
       </li>
     </>

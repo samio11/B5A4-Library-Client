@@ -5,6 +5,8 @@ import AddBook from "@/pages/AddBook/AddBook";
 import BorrowSUmmary from "@/pages/BorrowSummary/BorrowSUmmary";
 import HomeEditBook from "@/pages/HomePage/HomeEditBook";
 import CreateBorrowBook from "@/pages/BorrowBook/CreateBorrowBook";
+import AllBorrow from "@/pages/AllBorrows/AllBorrow";
+import BookInfo from "@/pages/AllBorrows/BookInfo";
 
 const route = createBrowserRouter([
   {
@@ -22,6 +24,14 @@ const route = createBrowserRouter([
       {
         path: "show-borrow-summary",
         element: <BorrowSUmmary></BorrowSUmmary>,
+      },
+      {
+        path: "all-borrow",
+        element: <AllBorrow></AllBorrow>,
+      },
+      {
+        path: "books/:id",
+        element: <BookInfo></BookInfo>,
       },
       {
         path: "edit-book/:id",
